@@ -84,40 +84,40 @@ class Home extends Component {
             
             <div className='row'>
                 <div className='column'>
-                    <div className='container2'>
-                    <a href='https://breastfeedingusa.org/civicrm/contribute/transact?reset=1&id=2' target='_blank' ><img className='darken' src={donate} alt='baby surrounded by milk' /></a>
+                    <a href='https://breastfeedingusa.org/civicrm/contribute/transact?reset=1&id=2' target='_blank' ><div className='container2'>
+                        <img className='darken' src={donate} alt='baby surrounded by milk' />
                         <div className="centered"><h1>Donate</h1></div>
-                    </div>
+                    </div></a>
                    
-                    <div className='container2'>
-                    <a href='https://breastfeedingusa.org/content/article/breastfeeding-information-articles' target='_blank'><img className='darken' src={articles} alt='Woman nursing toddler' /></a>
+                    <a href='https://breastfeedingusa.org/content/article/breastfeeding-information-articles' target='_blank'><div className='container2'>
+                        <img className='darken' src={articles} alt='Woman nursing toddler' />
                         <div className="centered"><h1>Articles</h1></div>
-                    </div>
+                    </div></a>
                 </div>
                 <div className='column'>
-                <div className='container2'>
-                    <a href='https://breastfeedingusa.org/aboutus' target='_blank'><img className='darken' src={colorlogo} alt='Breastfeeding USA logo'/></a>
+                    <a href='https://breastfeedingusa.org/aboutus' target='_blank'><div className='container2'>
+                        <img className='darken' src={colorlogo} alt='Breastfeeding USA logo'/>
                         <div className="centered"><h1>About Us</h1></div>
-                    </div>
-                <div className='container2'>
-                    <a href='https://breastfeedingusa.org/content/article/sleeping-baby-what-does-really-mean' target='_blank'><img className='darken' src={sleepresources} alt='sleeping mom and baby'/></a>
+                    </div></a>
+                    <a href='https://breastfeedingusa.org/content/article/sleeping-baby-what-does-really-mean' target='_blank'><div className='container2'>
+                        <img className='darken' src={sleepresources} alt='sleeping mom and baby'/>
                         <div className="centered"><h1>Biologically Normal Sleep Habits</h1></div>
-                    </div>
+                    </div></a>
                     
                 </div>
                 <div className='column'>
-                <div className='container2'>
-                    <a href='https://breastfeedingusa.org/content/becoming-breastfeeding-counselor' target='_blank'><img className='darken' src={becomecounselor} alt='Woman helping another woman breastfeed twins'/></a>
+                    <a href='https://breastfeedingusa.org/content/becoming-breastfeeding-counselor' target='_blank'><div className='container2'>
+                        <img className='darken' src={becomecounselor} alt='Woman helping another woman breastfeed twins'/>
                         <div className="centered"><h1>Become a Breastfeeding Counselor</h1></div>
-                    </div>
-                    <div className='container2'>
-                    <a href='https://breastfeedingusa.org/content/article/statement-breastfeeding' target='_blank'><img className='darken' src={statement} alt='Person breastfeeding in field of flowers'/></a>
+                    </div></a>
+                    <a href='https://breastfeedingusa.org/content/article/statement-breastfeeding' target='_blank'><div className='container2'>
+                        <img className='darken' src={statement} alt='Person breastfeeding in field of flowers'/>
                         <div className="centered"><h1>Statement on Breastfeeding</h1></div>
-                    </div>
-                    <div className='container2'>
-                    <a href='https://breastfeedingusa.org/content/article/milk-sharing-formal-and-informal' target='_blank'><img className='darken' src={supplementation} alt='parent holding supplemental nursing system for nursing parent'/></a>
+                    </div></a>
+                    <a href='https://breastfeedingusa.org/content/article/milk-sharing-formal-and-informal' target='_blank'><div className='container2'>
+                        <img className='darken' src={supplementation} alt='parent holding supplemental nursing system for nursing parent'/>
                         <div className="centered"><h1>Supplementation</h1></div>
-                    </div>
+                    </div></a>
                 </div>
             </div>
             </>
