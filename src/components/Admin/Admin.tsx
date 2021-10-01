@@ -49,7 +49,7 @@ class Admin extends Component <AdminProps, AdminState> {
             dateAccredited: this.state.dateAccredited
         }
 
-        fetch(`http://localhost:3000/counselor/:id`, {
+        fetch(`${APIURL}/counselor/:id`, {
                     method: 'POST',
                     body: JSON.stringify(newCounselorData),
                     headers: new Headers ({

@@ -11,6 +11,7 @@ import {
     ModalBody,
 } from "reactstrap";
 import { Chapter } from '../../types'
+import APIURL from '../../utils/Environment'
 
 type ChapterEditProps = {
     token: string;
@@ -45,7 +46,7 @@ class ChapterEdit extends Component<ChapterEditProps, Chapter> {
             chapterWebsite: this.state.chapterWebsite
         };
         fetch(
-        `http://localhost:3000/chapter/${this.props.chapterToUpdate.id}`,
+        `${APIURL}/chapter/${this.props.chapterToUpdate.id}`,
         {
             method: "PUT",
             body: JSON.stringify(updatedChapterData),

@@ -3,6 +3,7 @@ import { Component } from "react";
 import { Form, Button, FormGroup, Label, Input, Card, CardImg, CardBody, CardTitle, CardImgOverlay } from 'reactstrap';
 import logo from '../../assets/createChapter.jpg'
 import { Chapter } from '../../types'
+import APIURL from '../../utils/Environment'
 
 type ChapterProps = {
     fetchChapters: () => void
@@ -47,7 +48,7 @@ class ChapterCreate extends Component <ChapterProps, Chapter> {
             chapterWebsite: this.state.chapterWebsite,
         }
 
-        fetch(`http://localhost:3000/chapter/create`, {
+        fetch(`${APIURL}/chapter/create`, {
                     method: 'POST',
                     body: JSON.stringify(newChapterData),
                     headers: new Headers ({

@@ -3,6 +3,7 @@ import { Component } from "react";
 import { Counselor } from "../../types";
 import CounselorCreate from "./CounselorCreate";
 import { User } from "../../types";
+import APIURL from '../../utils/Environment'
 
 type CounselorIndexProps = {
     token: string;
@@ -30,7 +31,7 @@ class CounselorIndex extends Component<CounselorIndexProps, CounselorIndexState>
     }
 
     fetchCounselors = (): void => {
-        fetch(`http://localhost:3000/counselor/all`, {
+        fetch(`${APIURL}/counselor/all`, {
         method: "GET",
         headers: new Headers({
             "Content-Type": "application/json",

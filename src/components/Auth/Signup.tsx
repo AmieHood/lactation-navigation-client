@@ -4,6 +4,7 @@ import { Form, Input, Button, Label, FormGroup, Alert, Card, CardImg, CardBody, 
 import logo from '../../assets/dad.jpg'
 import { Redirect } from 'react-router-dom'
 import { User } from '../../types'
+import APIURL from '../../utils/Environment'
 
 
 type SignupProps = {
@@ -61,7 +62,7 @@ class Signup extends Component <SignupProps, SignupState>{
             password: this.state.password,
         }
 
-        fetch(`http://localhost:3000/user/signup`, {
+        fetch(`${APIURL}/user/signup`, {
                     method: 'POST',
                     body: JSON.stringify(newUserData),
                     headers: new Headers ({

@@ -2,6 +2,7 @@ import React from "react";
 import { Component } from "react";
 import { Form, Button, FormGroup, Label, Input, Modal, ModalBody, ModalHeader } from 'reactstrap';
 import { User } from '../../types'
+import APIURL from '../../utils/Environment'
 
 
 type UserEditProps = {
@@ -63,7 +64,7 @@ class UserEdit extends Component <UserEditProps, User> {
             confirmPassword: this.state.confirmPassword
         }
 
-        fetch(`http://localhost:3000/user/${this.props.userToUpdate.id}`, {
+        fetch(`${APIURL}/user/${this.props.userToUpdate.id}`, {
                     method: 'PUT',
                     body: JSON.stringify(updatedUserData),
                     headers: new Headers ({

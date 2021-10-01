@@ -26,7 +26,7 @@ type UserTableProps = {
         };
     }
     deleteUser = (user: User) => {
-        fetch(`http://localhost:3000/user/${user.id}`, {
+        fetch(`${APIURL}/user/${user.id}`, {
         method: "DELETE",
         headers: new Headers({
             "Content-Type": "application/json",

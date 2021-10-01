@@ -3,6 +3,7 @@ import { Form, Button, FormGroup, Label, Input, Card, CardBody, CardImg, CardTit
 import logo from '../../assets/beach.jpg'
 import { Counselor } from '../../types'
 import { Redirect } from 'react-router-dom'
+import APIURL from '../../utils/Environment'
 
 
 let dateInput = {
@@ -45,7 +46,7 @@ class CounselorCreate extends Component <CounselorProps, Counselor> {
         }
         console.info(newCounselorData)
 
-        fetch(`http://localhost:3000/counselor/create`, {
+        fetch(`${APIURL}/counselor/create`, {
                     method: 'POST',
                     body: JSON.stringify(newCounselorData),
                     headers: new Headers ({

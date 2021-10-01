@@ -49,7 +49,7 @@ class UserIndex extends Component <UserIndexProps, UserIndexState> {
     }
 
     fetchUsers = (): void => {
-        fetch(`http://localhost:3000/user/all`, {
+        fetch(`${APIURL}/user/all`, {
                     method: 'GET',
                     headers: new Headers ({
                         'Content-Type': 'application/json',

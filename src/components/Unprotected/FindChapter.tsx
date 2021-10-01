@@ -3,6 +3,7 @@ import { Input, Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap'
 import { Chapter } from '../../types'
 import logo from '../../assets/findchapter.jpg'
 import bfusalogo from '../../assets/logo.png'
+import APIURL from '../../utils/Environment'
 
 type FindChapterProps = {
 }
@@ -29,7 +30,7 @@ class FindChapter extends Component<FindChapterProps, FindChapterState> {
 
     fetchChapters = (): void => {
         fetch(
-            `http://localhost:3000/chapter/all`, {
+            `${APIURL}/chapter/all`, {
                 method: "GET",
                 headers: new Headers({
                 "Content-Type": "application/json",

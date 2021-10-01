@@ -5,12 +5,12 @@ switch (window.location.hostname) {
     APIURL = "http://localhost:3000"
     break;
 
-//   case "park-planner-app.herokuapp.com" :
-//     APIURL = "heroku app link here" //!add heroku app link here upon deployment
-//     break;
+  case "lactation-navigation.herokuapp.com" :
+    APIURL = "https://lactation-navigation.herokuapp.com" 
+    break;
 
-  default:
-    APIURL = "http://localhost:3000"
+  // default:
+  //   APIURL = "http://localhost:3000"
 }
 
 export default APIURL;

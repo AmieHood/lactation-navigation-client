@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Table, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 import { Chapter } from '../../types'
+import APIURL from '../../utils/Environment'
 
 type ChapterTableProps = {
     token: string
@@ -23,7 +24,7 @@ class ChapterTable extends Component<ChapterTableProps, ChapterTableState> {
     }
     
     deleteChapter = (chapter: Chapter) => {
-        fetch(`http://localhost:3000/chapter/${chapter.id}`, {
+        fetch(`${APIURL}/chapter/${chapter.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

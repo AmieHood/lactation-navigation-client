@@ -5,6 +5,7 @@ import ChapterCreate from './ChapterCreate'
 import ChapterEdit from './ChapterEdit'
 import ChapterTable from './ChapterTable'
 import { User } from '../../types'
+import APIURL from '../../utils/Environment'
 
 
 type ChapterIndexProps = {
@@ -33,7 +34,7 @@ class ChapterIndex extends Component <ChapterIndexProps, ChapterIndexState> {
     }
 
     fetchChapters = (): void => {
-        fetch(`http://localhost:3000/chapter/all`, {
+        fetch(`${APIURL}/chapter/all`, {
                     method: 'GET',
                     headers: new Headers ({
                         'Content-Type': 'application/json',

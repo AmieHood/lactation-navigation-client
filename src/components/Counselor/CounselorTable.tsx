@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Table } from 'reactstrap'
 import { Counselor } from '../../types'
+import APIURL from '../../utils/Environment'
 
 type CounselorTableProps = {
     token: string
@@ -18,7 +19,7 @@ class CounselorTable extends Component<CounselorTableProps, {}> {
         }
     }
     deleteCounselor = (counselor: Counselor) => {
-        fetch(`http://localhost:3000/counselor/${counselor.id}`, {
+        fetch(`${APIURL}/counselor/${counselor.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

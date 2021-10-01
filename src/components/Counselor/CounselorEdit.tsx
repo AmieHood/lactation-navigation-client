@@ -11,6 +11,7 @@ import {
     ModalBody,
 } from "reactstrap";
 import { Counselor } from '../../types'
+import APIURL from '../../utils/Environment'
 
 type CounselorEditProps = {
     token: string;
@@ -36,7 +37,7 @@ class CounselorEdit extends Component<CounselorEditProps, Counselor> {
         role: this.state.role,
         };
         fetch(
-        `http://localhost:3000/counselor/${this.props.counselorToUpdate.id}`,
+        `${APIURL}/counselor/${this.props.counselorToUpdate.id}`,
         {
             method: "PUT",
             body: JSON.stringify(updatedCounselorData),

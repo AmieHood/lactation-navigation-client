@@ -3,6 +3,7 @@ import { Component } from "react";
 import { Form, Button, FormGroup, Label, Input, Card, CardImg, CardBody, CardTitle } from 'reactstrap';
 import { User } from '../../types'
 import logo from '../../assets/info.jpg'
+import APIURL from '../../utils/Environment'
 
 
 type ProfileEditProps = {
@@ -46,7 +47,7 @@ class ProfileEdit extends Component <ProfileEditProps, ProfileEditState> {
             confirmPassword: this.state.confirmPassword
         }        
 
-        fetch(`http://localhost:3000/user/${this.props.userToUpdate.id}`, {
+        fetch(`${APIURL}/user/${this.props.userToUpdate.id}`, {
                     method: 'PUT',
                     body: JSON.stringify(updatedUserData),
                     headers: new Headers ({

@@ -5,6 +5,7 @@ import { SignupState } from "./Signup";
 import logo from '../../assets/dad.jpg'
 import { Redirect } from "react-router-dom";
 import { User } from '../../types'
+import APIURL from '../../utils/Environment'
 
 type LoginProps = {
     updateToken: (newToken: string) => void
@@ -43,7 +44,7 @@ class Login extends Component<LoginProps, SignupState> {
             email: this.state.email,
             password: this.state.password, 
         }
-        fetch('http://localhost:3000/user/login', {
+        fetch(`${APIURL}/user/login`, {
             method: 'POST',
             body: JSON.stringify(userData),
             headers: new Headers({
