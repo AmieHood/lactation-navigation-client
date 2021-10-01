@@ -52,7 +52,7 @@ class Sitebar extends Component<SitebarProps, SitebarState> {
         return (
         <div>
             <Navbar className="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 " expand="lg">
-            <NavbarBrand><img style={logoStyle} src={logo} alt=''/></NavbarBrand>
+            <img style={logoStyle} src={logo} alt=''/>
             
             <NavbarToggler onClick={this.toggle} className="mr-2">
                 <div id="close-icon" className={!this.state.isOpen ? "" : "open"}>
