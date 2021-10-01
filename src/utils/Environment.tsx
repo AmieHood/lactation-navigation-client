@@ -6,7 +6,7 @@ switch (window.location.hostname) {
     break;
 
   case "lactation-navigation.herokuapp.com" :
-    APIURL = "https://lactation-navigation.herokuapp.com" 
+    APIURL = "https://lactation-navigation-server.herokuapp.com" 
     break;
 
   // default:
