@@ -59,7 +59,7 @@ class Sitebar extends Component<SitebarProps, SitebarState> {
                 <span className='navbar-toggler-icon'></span>
                 </div>
             </NavbarToggler>
-            <Collapse isOpen={!this.state.isOpen} navbar>
+            <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="mr-auto sitebar" navbar> 
 
                 {this.props.token && this.props?.user?.Counselor?.role == 'Counselor' ? (
