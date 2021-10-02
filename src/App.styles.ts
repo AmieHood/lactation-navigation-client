@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
-import logo from './assets/logo.jpg'
+import findChapter from './assets/findchapter.jpg'
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -13,6 +13,12 @@ export const GlobalStyle = createGlobalStyle`
         justify-content: center;
         color: white;
         background-color: #cdcdcd;
+    }
+
+    h2 {
+        font-family: 'Lora', serif;
+        font-size: 2rem;
+        color: #ec5a29;
     }
 
     .card {
@@ -198,13 +204,20 @@ export const GlobalStyle = createGlobalStyle`
         background: #fff;
         box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
         transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-        padding: 14px 80px 18px 36px;
+        padding: .4em;
         cursor: pointer;
     }
 
     .chapter-cards:hover{
         transform: scale(1.05);
         box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    }
+
+    .card-body: {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .4em !important;
     }
 
     .form-styling {
@@ -216,7 +229,22 @@ export const GlobalStyle = createGlobalStyle`
         // padding-left: 5em
     }
     
+    //jumbotron styling
+    .find-chapter {
+        display: flex;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${findChapter});
+        background-size: cover;
+        padding-top: 25vh;
+        height: 50vh;
 
+        @media only screen and (max-width: 600px) {
+            padding-top: 10vh;
+            height: 30vh;
+        }
+    }
+
+    
 
 `
 

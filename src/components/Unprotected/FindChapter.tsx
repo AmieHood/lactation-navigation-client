@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Input, Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap'
+import { Input, Card, CardImg, CardBody, CardTitle, CardText, Jumbotron, Container } from 'reactstrap'
 import { Chapter } from '../../types'
 import logo from '../../assets/findchapter.jpg'
 import bfusalogo from '../../assets/logo.png'
@@ -58,14 +58,14 @@ class FindChapter extends Component<FindChapterProps, FindChapterState> {
         return this.state.chapters.map((chapter: Chapter, index: number) => {
         return (
             <Card size='xs' className='chapter-cards' key={index}>
-            <a href={chapter.chapterWebsite} target='_blank'>
-                <CardImg top width="25%" src={bfusalogo} />
-                <CardBody>
+                <a href={chapter.chapterWebsite} target='_blank'>
+                <CardImg className='card-body' top width="25%" src={bfusalogo} />
+                <CardBody className='card-body'>
                     <CardTitle tag='h2'>{chapter.chapterName}</CardTitle>
                     <CardText>{chapter.chapterCity}</CardText>
                     <CardText>{chapter.chapterState}</CardText>
                     <CardText>{chapter.chapterPhone}</CardText>
-                    <CardText>{chapter.chapterWebsite}</CardText>
+                    <a href={chapter.chapterWebsite} target='_blank'><CardText>Tap to Visit</CardText></a>
                 </CardBody>
                 </a>
             </Card>
@@ -80,14 +80,19 @@ class FindChapter extends Component<FindChapterProps, FindChapterState> {
     render() {
         return (
             <div>
-            <Card>
+            <Jumbotron className='find-chapter' fluid>
+                <Container fluid>
+                    <h1 className='display-3'>Find a Chapter Near You</h1>
+                </Container>
+            </Jumbotron>
+            {/* <Card>
                 <CardImg className='all-cards' top width="100%" src={logo} alt="People Hugging." />
                 <p>Image by Vonecia Carswell on Unsplash.</p>
                 <CardBody className='all-cards'>
                     <CardTitle className='card-img-overlay' tag="h1">Find a Chapter Near You</CardTitle>
                 </CardBody>
-            </Card>
-            <h3>Chapter List</h3>
+            </Card> */}
+            <h2 style={{textAlign: 'center', paddingTop: '1em'}}>Chapter List</h2>
             <hr />
             <div>
                 <Input placeholder="Search by State Abbreviation" onChange={this.filterChapters} />
