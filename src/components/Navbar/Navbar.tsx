@@ -14,7 +14,7 @@ import {
 } from "reactstrap";
 
 const logoStyle = {
-    height: "5em",
+    height: "7em",
 };
 
 type SitebarProps = {
@@ -53,7 +53,6 @@ class Sitebar extends Component<SitebarProps, SitebarState> {
         <div>
             <Navbar className="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 " expand="lg">
             <img style={logoStyle} src={logo} alt=''/>
-            
             <NavbarToggler onClick={this.toggle} className="mr-2">
                 <div id="close-icon" className={!this.state.isOpen ? "" : "open"}>
                 <span className='navbar-toggler-icon'></span>

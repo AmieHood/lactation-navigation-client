@@ -13,12 +13,14 @@ import becomecounselor from '../assets/becomecounselor.jpg'
 import statement from '../assets/statement.jpg'
 import sleepresources from '../assets/sleepresources.jpg'
 import supplementation from '../assets/supplementation.jpg'
-import biologicalnorm from '../assets/biologicalnorm.jpeg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import homesupport from '../assets/homesupport.jpg'
+import homesupportSmall from '../assets/homesupportSmall.jpg'
 
 const Background = styled.div`
-    background-image: url(${BGImageDesktop});
+    // background-image: url(${BGImageDesktop});
+    background-image: url(${homesupport});
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -27,13 +29,13 @@ const Background = styled.div`
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-width: 768px) {
-        background-image: url(${BGImage});
+    @media screen and (max-width: 600px) {
+        background-image: url(${homesupportSmall});
     }
 
-    @media only screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
-        background-image: url(${BGImage});
-    }
+    // @media only screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
+    //     background-image: url(${homesupport});
+    // }
 `
 
 const Text = styled.div`

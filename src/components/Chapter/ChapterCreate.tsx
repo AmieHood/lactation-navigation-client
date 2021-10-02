@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import { Form, Button, FormGroup, Label, Input, Card, CardImg, CardBody, CardTitle, CardImgOverlay } from 'reactstrap';
+import { Form, Button, FormGroup, Label, Input, Jumbotron, Container } from 'reactstrap';
 import logo from '../../assets/createChapter.jpg'
 import { Chapter } from '../../types'
 import APIURL from '../../utils/Environment'
@@ -76,7 +76,14 @@ class ChapterCreate extends Component <ChapterProps, Chapter> {
         return(
             <>
                 <div>
-                <Card inverse>
+                <Jumbotron className='chapter' fluid>
+                        <Container fluid>
+                            <h1 className='display-3'>Chapters</h1>
+                        </Container>
+                    </Jumbotron>
+                    <p style={{textAlign: 'center'}}>Photo by Kylie Lugo on Unsplash</p>
+
+                {/* <Card inverse>
                         <CardImg className='chapter' width="100%" src={logo} alt="Card image cap" />
                         <CardImgOverlay>
                             <CardTitle tag="h1">Create New Chapter</CardTitle>
@@ -84,8 +91,10 @@ class ChapterCreate extends Component <ChapterProps, Chapter> {
                             <p>Photo by Kylie Lugo on Unsplash</p>
                         <CardBody className='all-cards'>
                         </CardBody>
-                    </Card>
-                    <Form onSubmit={this.handleSubmit}>
+                    </Card> */}
+                    <div className='chapter-form'>
+                        <h2>Create a New Chapter</h2>
+                        <Form onSubmit={this.handleSubmit}>
                             <FormGroup>
                                 <Label htmlFor='chapterName'></Label>
                                 <Input placeholder='Chapter Name' type='text' name='chapterName' onChange={this.handleChange} value={this.state.chapterName} />
@@ -108,6 +117,7 @@ class ChapterCreate extends Component <ChapterProps, Chapter> {
                             </FormGroup>
                             <Button type='submit'>Create Chapter</Button>
                         </Form>
+                    </div>
                 </div>
             </>
         )

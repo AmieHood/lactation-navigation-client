@@ -76,12 +76,6 @@ class CounselorCreate extends Component <CounselorProps, Counselor> {
     render(){
         return(
                 <>
-                    {/* <Card className='card'>
-                        <CardImg className='all-cards' top width="100%" src={logo} alt="Card image cap" />
-                        <CardBody className='all-cards'>
-                            <CardTitle className='card-img-overlay' tag="h1">Become a Breastfeeding USA Counselor</CardTitle>
-                        </CardBody>
-                    </Card> */}
                     <Jumbotron className='signup-login' fluid>
                         <Container fluid>
                             <h1 className='display-3'>Become a Breastfeeding USA Counselor</h1>

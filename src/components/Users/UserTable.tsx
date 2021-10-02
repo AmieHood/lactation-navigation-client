@@ -105,7 +105,7 @@ type UserTableProps = {
         <div className='users-form'>
             <h2 style={{textAlign: 'center'}}>User List</h2>
             <hr />
-            <Table responsive hover>
+            <Table responsive hover className='js-sort-table'>
             <thead>
                 <tr>
                 <th>First Name</th>

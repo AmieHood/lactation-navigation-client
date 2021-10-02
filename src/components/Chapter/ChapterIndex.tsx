@@ -78,6 +78,8 @@ class ChapterIndex extends Component <ChapterIndexProps, ChapterIndexState> {
             fetchChapters={this.fetchChapters}
             token={this.props.token}
             />
+            <div className='users-form'>
+
             <ChapterTable
             chapters={this.state.chapters}
             editUpdateChapter={this.editUpdateChapter}
@@ -85,7 +87,8 @@ class ChapterIndex extends Component <ChapterIndexProps, ChapterIndexState> {
             fetchChapters={this.fetchChapters}
             token={this.props.token}
             />
-            
+            </div>
+
             {this.state.updateActive && this.state.chapterToUpdate ? (
                 <ChapterEdit
                 chapterToUpdate={this.state.chapterToUpdate}

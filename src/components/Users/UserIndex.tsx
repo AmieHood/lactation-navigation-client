@@ -114,9 +114,9 @@ class UserIndex extends Component <UserIndexProps, UserIndexState> {
             {this.props?.user?.Counselor?.role !== 'Counselor'
             ? <Redirect to="/" />
             :
-            <div className='signup-login-form'>
-                <Container className='signup-login-form'>
-                    <Row>
+            <div className='users-form'>
+                <Container>
+                    <Row style={{justifyContent: 'center'}}>
                         <Col md='9'>
                             <UserTable
                                 users={this.state.users}

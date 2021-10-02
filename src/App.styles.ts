@@ -2,6 +2,8 @@ import styled, { createGlobalStyle } from 'styled-components'
 import findChapter from './assets/findchapter.jpg'
 import login from './assets/dad.jpg'
 import info from './assets/info.jpg'
+import createChapter from './assets/createChapter.jpg'
+import createChapterDesktop from './assets/createChapterDesktop.jpg'
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -100,10 +102,6 @@ export const GlobalStyle = createGlobalStyle`
         margin-top: 3em
     }
 
-    .chapter {
-        filter: brightness(50%) !important;
-    }
-
     .row {
         display: flex;
         flex-wrap: wrap;
@@ -196,6 +194,90 @@ export const GlobalStyle = createGlobalStyle`
 
     }
 
+    
+    .card-body: {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .4em !important;
+    }
+    
+    .form-styling {
+        display: flex;
+        flex-direction: column;
+        // flex-wrap: wrap;
+        align-items: center;
+        // justify-content: space-between;
+        // padding-left: 5em
+    }
+    
+    //jumbotron styling
+    .find-chapter {
+        display: flex;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${findChapter});
+        background-size: cover;
+        padding-top: 25vh;
+        height: 50vh;
+        
+        @media only screen and (max-width: 600px) {
+            padding-top: 10vh;
+            height: 30vh;
+        }
+    }
+    
+    
+    //Signup-login Component
+    .signup-login {
+        display: flex;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${login});
+        background-size: cover;
+        padding-top: 25vh;
+        height: 50vh;
+        width: 100vw;
+        justify-content: center;
+        
+        @media only screen and (max-width: 600px) {
+            padding-top: 10vh;
+            height: 30vh;
+        }
+    }
+    
+    .signup-login-form {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2em;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    //Chapter Component
+    .chapter {
+        display: flex;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${createChapterDesktop});
+        background-size: cover;
+        padding-top: 25vh;
+        height: 50vh;
+        width: 100vw;
+        justify-content: center;
+        
+        @media only screen and (max-width: 600px) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${createChapter});
+            padding-top: 10vh;
+            height: 30vh;
+        }
+    }
+    
+    .chapter-form {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2em;
+        align-items: center;
+        justify-content: center;
+    }
+    
     .chapter-cards {
         background-color: #3b054f !important;
         margin: auto;
@@ -215,64 +297,7 @@ export const GlobalStyle = createGlobalStyle`
         box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
     }
 
-    .card-body: {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: .4em !important;
-    }
-
-    .form-styling {
-        display: flex;
-        flex-direction: column;
-        // flex-wrap: wrap;
-        align-items: center;
-        // justify-content: space-between;
-        // padding-left: 5em
-    }
-    
-    //jumbotron styling
-    .find-chapter {
-        display: flex;
-        text-align: center;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${findChapter});
-        background-size: cover;
-        padding-top: 25vh;
-        height: 50vh;
-
-        @media only screen and (max-width: 600px) {
-            padding-top: 10vh;
-            height: 30vh;
-        }
-    }
-
-    
-    //Signup-login
-    .signup-login {
-        display: flex;
-        text-align: center;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${login});
-        background-size: cover;
-        padding-top: 25vh;
-        height: 50vh;
-        width: 100vw;
-        justify-content: center;
-
-        @media only screen and (max-width: 600px) {
-            padding-top: 10vh;
-            height: 30vh;
-        }
-    }
-
-    .signup-login-form {
-        display: flex;
-        flex-direction: column;
-        padding-top: 2em;
-        align-items: center;
-        justify-content: center;
-    }
-
-    //Users Admin View
+    //Users Component
     .users {
         display: flex;
         text-align: center;
