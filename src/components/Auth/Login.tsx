@@ -84,12 +84,13 @@ class Login extends Component<LoginProps, SignupState> {
                 <FormGroup>
                 <Label htmlFor='password'>Password</Label>
                 <Input
+                    type='password'
                     onChange={this.handleChange}
                     name='password'
                     value={this.state.password}
                 />
                 </FormGroup>
-                <Button type='submit'>Login</Button>
+                <Button type='submit'>Log In</Button>
             </Form>
             </div>
             {this.state.loggedIn ?

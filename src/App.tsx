@@ -57,7 +57,7 @@ class App extends Component<{}, AppState> {
   updateToken = (newToken: string): void => {
     localStorage.setItem("token", newToken);
     this.setState({ token: newToken });
-    console.info(this.state.token);
+    // console.info(this.state.token);
     // this.fetchCounselor()
   };
 

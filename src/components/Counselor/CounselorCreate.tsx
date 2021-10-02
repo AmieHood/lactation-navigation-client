@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Button, FormGroup, Label, Input, Card, CardBody, CardImg, CardTitle, Alert } from 'reactstrap';
+import { Form, Button, FormGroup, Label, Input, Jumbotron, Container } from 'reactstrap';
 import logo from '../../assets/beach.jpg'
 import { Counselor } from '../../types'
 import { Redirect } from 'react-router-dom'
@@ -75,14 +75,20 @@ class CounselorCreate extends Component <CounselorProps, Counselor> {
     
     render(){
         return(
-                <div>
-                    <Card className='card'>
+                <>
+                    {/* <Card className='card'>
                         <CardImg className='all-cards' top width="100%" src={logo} alt="Card image cap" />
                         <CardBody className='all-cards'>
                             <CardTitle className='card-img-overlay' tag="h1">Become a Breastfeeding USA Counselor</CardTitle>
                         </CardBody>
-                    </Card>
-                    <p style={{textAlign: 'center', color: '#3b054f'}}>Already a Breastfeeding USA Counselor? Add your accreditation date here!</p>
+                    </Card> */}
+                    <Jumbotron className='signup-login' fluid>
+                        <Container fluid>
+                            <h1 className='display-3'>Become a Breastfeeding USA Counselor</h1>
+                        </Container>
+                    </Jumbotron>
+                    <div className='signup-login-form'>
+                    <h3 style={{textAlign: 'center', color: '#3b054f'}}>Already a Breastfeeding USA Counselor? Add your accreditation date here:</h3>
                     <Form onSubmit={this.handleSubmit}>
                     <FormGroup className='form-styling'>
                         <Label htmlFor="dateAccredited">Date Accredited</Label>
@@ -90,6 +96,9 @@ class CounselorCreate extends Component <CounselorProps, Counselor> {
                         <Button className='form-styling'>Add Date</Button>
                     </FormGroup>
                     </Form>
+                    <hr />
+                    <h3 style={{textAlign: 'center', color: '#3b054f'}}>Interested in Becoming a Breastfeeding USA Counselor? <a href='https://breastfeedingusa.org/content/becoming-breastfeeding-counselor'>Learn more!</a></h3>
+                    </div>
                     {this.state.role == 'Counselor' ? (
             <>
                 {window.confirm('Congratulations! You are a Breastfeeding Counselor!')}
@@ -98,7 +107,7 @@ class CounselorCreate extends Component <CounselorProps, Counselor> {
             ) : (
             <></>
             )}
-                </div> 
+                </> 
             )
         }
     }

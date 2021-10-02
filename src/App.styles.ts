@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components'
 import findChapter from './assets/findchapter.jpg'
+import login from './assets/dad.jpg'
+import info from './assets/info.jpg'
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -244,10 +246,12 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    
+    //Signup-login
     .signup-login {
         display: flex;
         text-align: center;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${findChapter});
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${login});
         background-size: cover;
         padding-top: 25vh;
         height: 50vh;
@@ -260,7 +264,6 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    //Signup-login
     .signup-login-form {
         display: flex;
         flex-direction: column;
@@ -269,6 +272,33 @@ export const GlobalStyle = createGlobalStyle`
         justify-content: center;
     }
 
+    //Users Admin View
+    .users {
+        display: flex;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${info});
+        background-size: cover;
+        padding-top: 25vh;
+        height: 50vh;
+        width: 100vw;
+        justify-content: center;
+
+        @media only screen and (max-width: 600px) {
+            padding-top: 10vh;
+            height: 30vh;
+            width: 100%;
+        }
+    }
+
+    .users-form {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2em;
+        padding-left: 1em;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
 
 `
 

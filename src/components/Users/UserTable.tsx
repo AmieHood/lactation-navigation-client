@@ -102,8 +102,8 @@ type UserTableProps = {
 
     render() {
         return (
-        <>
-            <h3>User List</h3>
+        <div className='users-form'>
+            <h2 style={{textAlign: 'center'}}>User List</h2>
             <hr />
             <Table responsive hover>
             <thead>
@@ -115,7 +115,7 @@ type UserTableProps = {
             </thead>
             <tbody>{this.userMapper()}</tbody>
             </Table>
-        </>
+        </div>
         );
     }
 }

@@ -8,9 +8,6 @@ switch (window.location.hostname) {
   case "lactation-navigation.herokuapp.com" :
     APIURL = "https://lactation-navigation-server.herokuapp.com" 
     break;
-
-  // default:
-  //   APIURL = "http://localhost:3000"
 }
 
 export default APIURL;

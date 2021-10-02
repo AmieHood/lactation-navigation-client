@@ -71,7 +71,7 @@ class Sitebar extends Component<SitebarProps, SitebarState> {
                     </NavItem>
                     <NavItem>
                         <NavLink to="/user" onClick={this.toggle}>
-                        <Link to="/user" className='nav-link text-white nav-item' >Profile</Link>
+                        <Link to="/user" className='nav-link text-white nav-item' >Users</Link>
                         </NavLink>
                     </NavItem>
                     <NavItem>

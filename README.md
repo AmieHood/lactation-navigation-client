@@ -17,11 +17,23 @@ This project is made for [Breastfeeding USA](https://breastfeedingusa.org/), a 5
 7. npm install in the client directory
 8. npm start on localhost:3001
 
+## Testing Functionality
+- All home page content below the first full view height links to information on the original Breastfeeding USA site. 
+- Click on 'Find a Local Chapter' on the home screen or 'Find Support' in the navbar to view Chapters and search by state/territory. This content is created by admins (Breastfeeding Counselors) but viewable without a required login.
+- Sign up (click log in) for a new account. In version 2.0, users will have access to past publications. 
+- After signing up, you should be redirected to the 'Become a Counselor' page. Add your accreditation date. In version 2.0, admins will add Counselors, but for this deployment, we're on the honor system. (This should fulfill the admin requirement for now.)
+- Once you have become a counselor and added your accreditation date, you are redirected to log in with your user credentials. 
+- After logging in, you can update and delete existing user information (Users link on navbar), create new chapters, and update and delete existing chapters (Chapter link on navbar).
+
+
 ## Coming in Version 2.0
 - Some files are already included and staged for version 2.0
 - Administration Screen
 - Membership
 - Counselors will be created by Administrators rather than users giving themselves Counselor status
+- Restrict Counselors to only creating one Chapter. 
+- Link Counselors to Chapters in the Find Chapter section.
+- Move all content currently on the Breastfeeding USA site to this page
 
 
 

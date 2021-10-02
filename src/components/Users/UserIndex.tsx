@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import { Container, Col, Row, Card, CardImg, CardBody, CardTitle } from 'reactstrap';
+import { Container, Col, Row, Jumbotron } from 'reactstrap';
 import APIURL from "../../utils/Environment";
 import { User } from '../../types'
 import UserEdit from './UserEdit'
@@ -104,43 +104,44 @@ class UserIndex extends Component <UserIndexProps, UserIndexState> {
     
     render(){
         return(
-            <div>
-                <Card className='card'>
-                    <CardImg className='all-cards' top width="100%" src={logo} alt="Card image cap" />
-                    <p>Photo by Thea on Unsplash</p>
-                    <CardBody className='all-cards'>
-                        <CardTitle className='card-img-overlay' tag="h1">User Profiles</CardTitle>
-                    </CardBody>
-                </Card>
+            <>
+                <Jumbotron className='users' fluid>
+                    <Container fluid>
+                        <h1 className='display-3'>Users</h1>
+                    </Container>
+                </Jumbotron>
+                <p style={{textAlign: 'center'}}>Photo by Christina Rumpf on Unsplash</p>
             {this.props?.user?.Counselor?.role !== 'Counselor'
             ? <Redirect to="/" />
             :
-            <Container>
-                <Row>
-                    <Col md='9'>
-                        <UserTable
-                            users={this.state.users}
-                            editUpdateUser={this.editUpdateUser}
-                            updateOn={this.updateOn}
-                            fetchUsers={this.fetchUsers}
-                            token={this.props.token}
-                            />
+            <div className='signup-login-form'>
+                <Container className='signup-login-form'>
+                    <Row>
+                        <Col md='9'>
+                            <UserTable
+                                users={this.state.users}
+                                editUpdateUser={this.editUpdateUser}
+                                updateOn={this.updateOn}
+                                fetchUsers={this.fetchUsers}
+                                token={this.props.token}
+                                />
 
-                    </Col>
-                    {this.state.updateActive  ? (
-                        <UserEdit
-                        userToUpdate={this.state.userToUpdate}
-                        updateOff={this.updateOff}
-                        token={this.props.token}
-                        fetchUsers={this.fetchUsers}
-                        />
-                        ) : (
-                            <></>
-                            )}
-                </Row>
-            </Container>
+                        </Col>
+                        {this.state.updateActive  ? (
+                            <UserEdit
+                            userToUpdate={this.state.userToUpdate}
+                            updateOff={this.updateOff}
+                            token={this.props.token}
+                            fetchUsers={this.fetchUsers}
+                            />
+                            ) : (
+                                <></>
+                                )}
+                    </Row>
+                </Container>
+            </div>
             }
-            </div> 
+            </> 
             
         )
     }
