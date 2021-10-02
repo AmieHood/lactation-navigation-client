@@ -244,7 +244,31 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    
+    .signup-login {
+        display: flex;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${findChapter});
+        background-size: cover;
+        padding-top: 25vh;
+        height: 50vh;
+        width: 100vw;
+        justify-content: center;
+
+        @media only screen and (max-width: 600px) {
+            padding-top: 10vh;
+            height: 30vh;
+        }
+    }
+
+    //Signup-login
+    .signup-login-form {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2em;
+        align-items: center;
+        justify-content: center;
+    }
+
 
 `
 

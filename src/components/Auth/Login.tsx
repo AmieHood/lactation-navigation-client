@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import { Button, Form, FormGroup, Input, Label, Card, CardImg, CardBody, CardTitle, Alert } from 'reactstrap'
+import { Button, Form, FormGroup, Input, Label, Jumbotron, Container, Alert } from 'reactstrap'
 import { SignupState } from "./Signup";
 import logo from '../../assets/dad.jpg'
 import { Redirect } from "react-router-dom";
@@ -63,15 +63,13 @@ class Login extends Component<LoginProps, SignupState> {
 
     render() {
         return (
-            <div>
-                <Card className='card'>
-                    <CardImg className='all-cards' top width="100%" src={logo} alt="Card image cap" />
-                    <p>Photo by Kelly Sikkema on Unsplash</p>
-                    <CardBody className='all-cards'>
-                        <CardTitle className='card-img-overlay' tag="h1">Log In</CardTitle>
-                    </CardBody>
-                </Card>
-
+            <>
+            <Jumbotron className='signup-login' fluid>
+                <Container fluid>
+                    <h1 className='display-3'>Log In</h1>
+                </Container>
+            </Jumbotron>
+            <div className='signup-login-form'>
             <Form onSubmit={this.handleSubmit}>
                 <FormGroup>
                 <Label htmlFor='email'>Email</Label>
@@ -93,13 +91,14 @@ class Login extends Component<LoginProps, SignupState> {
                 </FormGroup>
                 <Button type='submit'>Login</Button>
             </Form>
+            </div>
             {this.state.loggedIn ?
             <>
+            {window.confirm('Success! You are logged in.')}
             <Redirect push to='/'/>
-            <Alert className='message'>'You are logged in!'</Alert>
             </>
             : <></>}
-            </div>
+            </>
         )
         }
 }
