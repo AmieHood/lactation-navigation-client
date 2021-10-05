@@ -187,9 +187,13 @@ export const GlobalStyle = createGlobalStyle`
         justify-content: space-around;
         flex-wrap: wrap;
         align-items: center;
+        padding-left: 15%;
+        padding-right: 15%;
 
         @media only screen and (max-width: 600px){
-            max-width: 100vw
+            max-width: 100vw;
+            padding-left: 0px;
+            padding-right: 0px;
         }
 
     }

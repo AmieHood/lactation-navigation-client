@@ -86,8 +86,7 @@ class FindChapter extends Component<FindChapterProps, FindChapterState> {
                 </Container>
             </Jumbotron>
             <h2 style={{textAlign: 'center', paddingTop: '1em'}}>Chapter List</h2>
-            <hr />
-            <div>
+            <div className='cardsContainer'>
                 <Input placeholder="Search by State Abbreviation" onChange={this.filterChapters} />
             </div>
             <div className='cardsContainer'>
