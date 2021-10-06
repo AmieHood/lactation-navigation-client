@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import { Button, Form, FormGroup, Input, Label, Jumbotron, Container, Alert } from 'reactstrap'
+import { Button, Form, FormGroup, Input, Label, Jumbotron, Container } from 'reactstrap'
 import { SignupState } from "./Signup";
 import logo from '../../assets/dad.jpg'
 import { Redirect } from "react-router-dom";
@@ -55,8 +55,14 @@ class Login extends Component<LoginProps, SignupState> {
             .then(data => {
             this.props.updateToken(data.sessionToken)
             this.props.setUser(data.user)
-            this.setState({ loggedIn: true})
             console.log(data.user)
+            if (data.user !== undefined){
+                this.setState({ loggedIn: true})                
+                {window.confirm('Success! You are logged in.')}
+                <Redirect push to='/'/>
+            } else if (data.user === undefined){
+                {window.confirm('Oops! Check your login credentials and try again.')}
+            }
         })
         .catch(err => console.info(err))
     }
@@ -93,12 +99,6 @@ class Login extends Component<LoginProps, SignupState> {
                 <Button type='submit'>Log In</Button>
             </Form>
             </div>
-            {this.state.loggedIn ?
-            <>
-            {window.confirm('Success! You are logged in.')}
-            <Redirect push to='/'/>
-            </>
-            : <></>}
             </>
         )
         }
